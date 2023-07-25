@@ -1,0 +1,20 @@
+<header class="header">
+  <p id="header-title"><strong>Michael's Portfolio</strong></p>
+  <p id="header-description">Collective Location of Imagination</p>
+
+  <nav id="header-nav" class="h-nav">
+    <ul>
+      <li><%= link_to("Home", root_path) %></li>
+      <li><%= link_to("Projects", projects_path) %></li>
+      <li><%= link_to("Articles", articles_path) %></li>
+      <li><%= link_to("Experience", experience_path) %></li>
+      <li><%= link_to("About Me", aboutme_path) %></li>
+    </ul>
+  </nav>
+
+  <div id="header-banner-container">
+    <div id="header-banner-img-container">
+      <%= image_tag("headers/header.png", alt: "Header banner image", id: "header-banner-img") %>
+    </div>
+  </div>
+</header>

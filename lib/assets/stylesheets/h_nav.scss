@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.h-nav
+{
+  width: 100%;
+  text-align: center;
+
+  ul
+  {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: rgb(49, 49, 49);
+
+    li
+    {
+      background: rgb(49, 49, 49);
+      padding: 1.5em;
+    }
+  }
+}

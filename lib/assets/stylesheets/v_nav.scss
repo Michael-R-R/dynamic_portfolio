@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.v-nav
+{
+  width: 100%;
+  text-align: center;
+
+  ul
+  {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    line-height: 2em;
+  }
+}

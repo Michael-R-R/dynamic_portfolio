@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root("pages#home")
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get("/projects", to: "pages#projects")
+  get("/articles", to: "pages#articles")
+  get("/experience", to: "pages#experience")
+  get("/aboutme", to: "pages#aboutme")
+
 end
