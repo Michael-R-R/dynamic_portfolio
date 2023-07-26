@@ -1,3 +1,35 @@
 <% provide(:title, "About Me") %>
 
-<h1>About Me</h1>
+<div class="h-container">
+  <div class="v-container">
+    <div class="v-container-item">
+      <%= image_tag("aboutme/me.png",
+                    alt: "about me image",
+                    id: "about-me-img",
+                    style: "border-radius:50%; width:50%; margin-top:10px;") %>
+
+      <p>
+        I am a passionate developer who focuses their studies in
+        computer graphics programming. It is the grand scope and
+        challenge that drives me forward in understanding how to
+        give graphical life to a digital space. I enjoy developing
+        systems that help break down large problems into manageable
+        and flexible pieces. This way of thinking leads me
+        to studying effective code architectures in order to foster healthy
+        code bases that remain extendable and maintainable. <br><br>
+
+        When I am not studying I can be found mountain biking, reading, writing, or
+        playing video games with my significant other. A few of my favorite novels
+        at the moment are: The Farseer Trilogy by Robin Hobb, Ship of Magic by Robin Hobb,
+        The Stormlight Archive by Brandon Sanderson, Children of Time by Adrian Tchaikovsky,
+        and The Expanse by James S. A. Corey. <br><br>
+
+        If you wish to learn more about me and my technical interest, please check out my,
+        <strong><%= link_to("Projects", projects_path) %></strong> and
+        <strong><%= link_to("Articles", articles_path) %></strong>. <br><br>
+
+        Take care and happy coding.
+      </p>
+    </div>
+  </div>
+</div>

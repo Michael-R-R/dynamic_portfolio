@@ -1,6 +1,6 @@
 <header class="header">
-  <p id="header-title"><strong>Michael's Portfolio</strong></p>
-  <p id="header-description">Collective Location of Imagination</p>
+  <div id="header-title"><strong>Michael's Portfolio</strong></div>
+  <div id="header-description">Collective Location of Imagination</div>
 
   <nav id="header-nav" class="h-nav">
     <ul>
@@ -12,9 +12,12 @@
     </ul>
   </nav>
 
-  <div id="header-banner-container">
-    <div id="header-banner-img-container">
-      <%= image_tag("headers/header.png", alt: "Header banner image", id: "header-banner-img") %>
+  <% if yield(:header_img_path) != ""%>
+    <div id="header-banner-container">
+      <div id="header-banner-img-container">
+        <%= image_tag(yield(:header_img_path), alt: "Header banner image", id: "header-banner-img") %>
+      </div>
     </div>
-  </div>
+  <% end %>
+
 </header>

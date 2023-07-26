@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+// ----- Desktop ----- //
+
 .h-container
 {
   display: flex;
@@ -19,9 +21,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+  margin: 20px auto 20px auto;
+  width: 50%;
   gap: 10px;
 
   .v-container-item
@@ -34,28 +35,37 @@
     width: 100%;
     height: 100%;
 
-    h1
+    .v-container-list
     {
-      a:hover
-      {
-        opacity: 0.3;
-      }
+      font-size: 20px;
+      text-align: left;
+      line-height: 1.8em;
+      margin: 0 6% 0 6%;
+      list-style-type: square;
     }
+  }
+}
 
-    .v-nav
+// ----- Mobile ----- //
+
+@media only screen and (max-width: 640px)
+{
+  .h-container
+  {
+    flex-flow: row wrap;
+  }
+
+  .v-container
+  {
+    width: 90%;
+
+    .v-container-item
     {
-      li
+      img
       {
-        font-size: 1.2em;
-        padding-bottom: 1.5em;
-
-        a
-        {
-          img
-          {
-            width: 50%;
-          }
-        }
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }

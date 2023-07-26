@@ -1,11 +1,12 @@
 @charset "UTF-8";
-@import "../../../lib/assets/stylesheets/reset";
-@import "../../../lib/assets/stylesheets/header";
-@import "../../../lib/assets/stylesheets/footer";
-@import "../../../lib/assets/stylesheets/h_nav";
-@import "../../../lib/assets/stylesheets/v_nav";
-@import "../../../lib/assets/stylesheets/container";
-@import "../../../lib/assets/stylesheets/mobile";
+
+@import "../../public/stylesheets/reset";
+@import "../../public/stylesheets/header";
+@import "../../public/stylesheets/footer";
+@import "../../public/stylesheets/h_nav";
+@import "../../public/stylesheets/v_nav";
+@import "../../public/stylesheets/container";
+@import "../../public/stylesheets/see_more_link";
 
 $light-gray: rgb(67, 67, 67);
 $medium-gray: rgb(49, 49, 49);
@@ -29,26 +30,39 @@ footer
   width: 100%;
 }
 
+p
+{
+  word-wrap: break-word;
+  text-align: left;
+  font-size: 22px;
+  line-height: 1.5em;
+  margin: 5% 5% 5% 5%;
+}
+
 h1, h2
 {
   background: rgb(49, 49, 49);
+  padding: 20px 15px 20px 15px;
   letter-spacing: 3px;
   margin: 10px auto 10px auto;
   border-radius: 10px;
+
+  a:hover
+  {
+    opacity: 0.3;
+  }
 }
 
 h1
 {
   font-size: 30px;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  width: 100%;
 }
 
 h2
 {
-  font-size: 28px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  width: 95%;
+  font-size: 20px;
   line-height: 1.1em;
 }
 
@@ -57,6 +71,7 @@ nav
   ul
   {
     font-size: 1.3em;
+    list-style-type: none;
   }
 }
 
