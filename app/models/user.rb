@@ -21,4 +21,7 @@ class User < ApplicationRecord
 
   before_save { !username.downcase; !email.downcase }
 
+  has_one(:role)
+  has_one(:permission)
+
 end

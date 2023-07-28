@@ -2,5 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import "./public/NavHighlighter"
 import "./main.js"
