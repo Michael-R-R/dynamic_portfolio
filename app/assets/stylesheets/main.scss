@@ -7,6 +7,7 @@
 @import "../../public/stylesheets/v_nav";
 @import "../../public/stylesheets/container";
 @import "../../public/stylesheets/see_more_link";
+@import "../../public/stylesheets/alert";
 
 $light-gray: rgb(67, 67, 67);
 $medium-gray: rgb(49, 49, 49);
@@ -122,6 +123,18 @@ button
   {
     background-color: rgb(26, 26, 26);
   }
+}
+
+label
+{
+  display: block;
+  margin: 0 auto 5px auto;
+}
+
+input
+{
+  display: block;
+  margin: 0 auto 10px auto;
 }
 
 .v-break

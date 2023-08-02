@@ -1,0 +1,17 @@
+<% provide(:title, "Login") %>
+
+<div class="v-container">
+  <div class="v-container-item">
+    <h1>Log in</h1>
+
+    <%= form_with(url: secret_login_path, scope: :session) do |f| %>
+      <%= f.label(:email) %>
+      <%= f.email_field(:email) %>
+
+      <%= f.label(:password) %>
+      <%= f.password_field(:password) %>
+
+      <%= f.submit("Log in") %>
+    <% end %>
+  </div>
+</div>
