@@ -1,5 +1,7 @@
-<div class="v-container">
-  <% flash.each do |type, msg| %>
-    <div class="alert-<%= type %>"><%= msg %></div>
-  <% end %>
-</div>
+<% if flash.count > 0 %>
+  <div class="v-container">
+    <% flash.each do |type, msg| %>
+      <div class="alert-<%= type %>"><%= msg %></div>
+    <% end %>
+  </div>
+<% end %>

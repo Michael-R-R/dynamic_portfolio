@@ -2,6 +2,9 @@
 
 <div class="v-container">
   <div class="v-container-item">
-    <h1><%= @user.username %></h1>
+    <% if logged_in? %>
+      <h1><%= @user.username %></h1>
+      <h1>Logged in</h1>
+    <% end %>
   </div>
 </div>
