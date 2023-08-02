@@ -13,10 +13,10 @@
 
   <body class="<%= controller_name.underscore %>">
 
-    <%= render("layouts/header") %>
+    <%= render("shared/header") %>
     <%= render("shared/flashes") %>
     <%= yield %>
-    <%= render("layouts/footer") %>
+    <%= render("shared/footer") %>
 
   </body>
 </html>
