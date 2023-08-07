@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   delete("/secret_logout", to: "sessions#destroy")
 
   resources(:users)
+  resources(:posts)
 
 end

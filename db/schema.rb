@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_28_170107) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_07_171734) do
   create_table "permissions", force: :cascade do |t|
     t.boolean "create"
     t.boolean "edit"
@@ -19,6 +19,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_28_170107) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_permissions_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "type_tag"
+    t.string "title"
+    t.string "thumbnail"
+    t.text "body"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -42,5 +53,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_28_170107) do
   end
 
   add_foreign_key "permissions", "users"
+  add_foreign_key "posts", "users"
   add_foreign_key "roles", "users"
 end

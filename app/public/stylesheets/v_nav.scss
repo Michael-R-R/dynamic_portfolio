@@ -8,7 +8,7 @@
   ul
   {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
     line-height: 2em;

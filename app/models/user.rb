@@ -12,7 +12,7 @@ class User < ApplicationRecord
             presence: true,
             uniqueness: true,
             format: { with: VALID_EMAIL_REGEX },
-            length: {maximum: 255})
+            length: { maximum: 255 })
   validates(:password,
             presence: true,
             length: { minimum: 6 })
@@ -23,5 +23,6 @@ class User < ApplicationRecord
 
   has_one(:role)
   has_one(:permission)
+  has_many(:post)
 
 end

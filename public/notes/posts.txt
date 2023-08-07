@@ -1,0 +1,39 @@
+* Notes *
+
+* What is it you want to accomplish?
+- I need a system for project and articles pages.
+- This system will encompass writing content for pages,
+which gets stored in the DB, and then displayed.
+
+* Things needed?
+- Only logged in users can create, edit, delete pages.
+- Only those with correct role and permissions should be allowed to create, edit, delete pages.
+- Creating project/article pages will be done through the Profile(user/show) page.
+- A model for project/article pages.
+- A controller for project/article pages.
+- a view for project/article pages.
+
+* Model - Post
+- id: required
+- type_tag: required
+- title: required
+- thumbnail: required
+- body
+- date created: required
+- date edited: required
+- belongs_to: user
+
+* Controller - Posts
+- show
+- new
+- create
+- edit
+- update
+- destroy
+
+* View - Posts
+- show
+- new
+- create
+- edit
+- destroy
