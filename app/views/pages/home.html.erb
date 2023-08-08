@@ -1,4 +1,38 @@
 <% provide(:title, "Home") %>
 <% provide(:header_img_path, "headers/header.png") %>
+<% content_for(:head) do %>
+  <%= javascript_import_module_tag("pages/Home") %>
+<% end %>
 
-<%= render("pages/post_previews") %>
+<div class="h-container">
+
+  <div class="v-container">
+    <div class="v-container-item">
+      <h1>Projects</h1>
+      <nav id="v-nav-projects-preview" class="v-nav">
+        <ul class="post-preview-list">
+          <% @p_posts.each do |p|%>
+            <%= render(:partial => "shared/post_preview", :locals => {:p => p})%>
+          <% end %>
+        </ul>
+      </nav>
+
+      <p class="see-more-link"><%= link_to("See more...", projects_path) %></p>
+    </div>
+  </div>
+
+  <div class="v-container">
+    <div class="v-container-item">
+      <h1>Articles</h1>
+      <nav id="v-nav-articles-preview" class="v-nav">
+        <ul class="post-preview-list">
+          <% @a_posts.each do |p|%>
+            <%= render(:partial => "shared/post_preview", :locals => {:p => p})%>
+          <% end %>
+        </ul>
+      </nav>
+
+      <p class="see-more-link"><%= link_to("See more...", articles_path) %></p>
+    </div>
+  </div>
+</div>

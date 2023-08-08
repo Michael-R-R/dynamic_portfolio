@@ -1,8 +1,8 @@
 <div class="v-container">
   <div class="v-container-item">
-    <h1><%= @post.title %></h1>
-    <small><%= @post.updated_at.to_formatted_s(:long_ordinal) %> GMT</small>
-    <%= image_tag(@post.thumbnail) %>
-    <p><%= @post.body %></p>
+    <h1 class="post-title"><%= @post.title %></h1>
+    <small class="post-date"><%= @post.updated_at.to_formatted_s(:long_ordinal) %> GMT</small>
+    <%= image_tag(@post.thumbnail, class: "post-thumbnail") %>
+    <div class="post-body"><%= @post.body %></div>
   </div>
 </div>

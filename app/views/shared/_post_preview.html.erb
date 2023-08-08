@@ -1,0 +1,8 @@
+<li class="post-preview-item">
+    <a class="post-preview-link" href="<%= post_path(p) %>">
+    <h1 class="post-preview-title"><%= p.title %></h1>
+    <%= image_tag(p.thumbnail, class: "post-preview-thumbnail") %>
+    <p class="post-preview-body"><%= p.body %></p>
+    <small class="post-preview-date"><%= p.created_at.to_formatted_s(:long_ordinal) %> GMT</small>
+    </a>
+</li>

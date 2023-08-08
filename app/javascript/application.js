@@ -2,4 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import "./main.js"
+import "./shared/HeaderNavHighlight.js"
