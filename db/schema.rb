@@ -22,10 +22,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_07_171734) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "type_tag"
     t.string "title"
     t.string "thumbnail"
     t.text "body"
+    t.string "type"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -2,6 +2,8 @@
 {
   .post-preview-item
   {
+    margin: 10px 0 10px 0;
+
     .post-preview-link
     {
       display: flex;
@@ -23,11 +25,17 @@
 
     .post-preview-body
     {
-      font-size: 0.7em;
-      margin: 0 30% 0 30%;
-      max-height: 256px;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      margin: 15px auto 0 auto;
+
+      p
+      {
+        font-size: 16px;
+        width: 100%;
+        margin: 0 auto 0 auto;
+        max-height: 256px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     .post-preview-date

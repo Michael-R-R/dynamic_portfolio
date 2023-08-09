@@ -15,13 +15,20 @@ which gets stored in the DB, and then displayed.
 
 * Model - Post
 - id: required
-- type_tag: required
 - title: required
 - thumbnail: required
 - body
 - date created: required
 - date edited: required
+- has_many: project
+- has_many: article
 - belongs_to: user
+
+* Model - Project
+- belongs_to: post
+
+* Model - Article
+- belongs_to: post
 
 * Controller - Posts
 - show

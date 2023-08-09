@@ -5,6 +5,6 @@ class Role < ApplicationRecord
 
   before_save { !role_name.downcase }
 
-  belongs_to :user
+  belongs_to(:user)
 
 end

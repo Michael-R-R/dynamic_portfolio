@@ -12,7 +12,7 @@
       <nav id="v-nav-projects-preview" class="v-nav">
         <ul class="post-preview-list">
           <% @p_posts.each do |p|%>
-            <%= render(:partial => "shared/post_preview", :locals => {:p => p})%>
+            <%= render(:partial => "shared/post_preview", :locals => {:p => p}) %>
           <% end %>
         </ul>
       </nav>
@@ -27,7 +27,7 @@
       <nav id="v-nav-articles-preview" class="v-nav">
         <ul class="post-preview-list">
           <% @a_posts.each do |p|%>
-            <%= render(:partial => "shared/post_preview", :locals => {:p => p})%>
+            <%= render(:partial => "shared/post_preview", :locals => {:p => p}) %>
           <% end %>
         </ul>
       </nav>
