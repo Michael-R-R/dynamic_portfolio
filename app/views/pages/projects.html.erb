@@ -1,3 +1,14 @@
 <% provide(:title, "Projects") %>
+<% content_for(:head) do %>
+  <%= javascript_import_module_tag("pages/Projects")%>
+<% end %>
 
-<h1>Projects</h1>
+<div class="h-container">
+    <div class="v-container">
+        <div class="v-container-item">
+            <nav id="v-nav-projects-preview" class="v-nav">
+                <%= render(:partial => "shared/post_preview", :locals => { :posts => @p_posts }) %>
+            </nav>
+        </div>
+    </div>
+</div>

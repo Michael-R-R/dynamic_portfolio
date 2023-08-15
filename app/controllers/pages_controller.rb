@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def projects
-
+    @p_posts = Project.last(6).reverse_each
   end
 
   def articles

@@ -2,4 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import "./shared/HeaderNavHighlight.js"
+import "shared/HeaderNavHighlight"
+
+Turbo.session.drive = false
