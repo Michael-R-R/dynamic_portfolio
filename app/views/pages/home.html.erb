@@ -1,7 +1,8 @@
 <% provide(:title, "Home") %>
 <% provide(:header_img_path, "headers/header.png") %>
 <% content_for(:head) do %>
-  <%= javascript_import_module_tag("pages/Home")%>
+  <%= stylesheet_link_tag("shared/post_preview", "data-turbo-track": "reload") %>
+  <%= javascript_import_module_tag("public/Home")%>
 <% end %>
 
 <div class="h-container">

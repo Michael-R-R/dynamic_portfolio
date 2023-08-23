@@ -6,11 +6,14 @@ class PagesController < ApplicationController
   end
 
   def projects
-    @p_posts = Project.last(6).reverse_each
+    @max_count = Project.count
+    @show_count = [6, @max_count].min()
+    @p_posts = Project.last(@show_count).reverse_each
   end
 
   def articles
-
+    @show_count = 6
+    @a_posts = Article.last(@show_count).reverse_each
   end
 
   def experience

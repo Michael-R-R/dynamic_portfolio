@@ -1,7 +1,10 @@
 <% provide(:title, "Projects") %>
 <% content_for(:head) do %>
-  <%= javascript_import_module_tag("pages/Projects")%>
+  <%= stylesheet_link_tag("shared/post_preview", "data-turbo-track": "reload") %>
+  <%= javascript_import_module_tag("public/Projects")%>
 <% end %>
+<%= hidden_field_tag("show_count", @show_count,  { :id => "show-count" }) %>
+<%= hidden_field_tag("max_count", @max_count,  { :id => "max-count" }) %>
 
 <div class="h-container">
     <div class="v-container">

@@ -1,5 +1,5 @@
-import { highlightNavigation } from "../public/NavHighlighter"
-import { loadPreviewBodies } from "../public/LoadPreviewBodies"
+import { highlightNavigation } from "../Util/NavHighlighter"
+import { loadPreviewBodies } from "../Util/LoadPreviewBodies"
 
 document.addEventListener("turbo:load", () =>
 {

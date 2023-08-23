@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
-@import "../../public/stylesheets/reset";
-@import "../../public/stylesheets/header";
-@import "../../public/stylesheets/footer";
-@import "../../public/stylesheets/h_nav";
-@import "../../public/stylesheets/v_nav";
-@import "../../public/stylesheets/container";
-@import "../../public/stylesheets/see_more_link";
-@import "../../public/stylesheets/alert";
-@import "../../public/stylesheets/post_preview";
+@import "shared/reset";
+@import "shared/header";
+@import "shared/footer";
+@import "shared/h_nav";
+@import "shared/v_nav";
+@import "shared/container";
+@import "shared/see_more_link";
+@import "shared/alert";
 
 $light-gray: rgb(67, 67, 67);
 $medium-gray: rgb(49, 49, 49);
