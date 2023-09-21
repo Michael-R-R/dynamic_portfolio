@@ -5,6 +5,7 @@ ruby "3.2.2"
 
 gem "sassc-rails", "2.1.2"
 gem "bcrypt", "3.1.18"
+gem "pagy", "~> 6.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"

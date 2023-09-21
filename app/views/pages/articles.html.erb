@@ -1,9 +1,16 @@
 <% provide(:title, "Articles") %>
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag("shared/post_preview", "data-turbo-track": "reload") %>
+  <%= javascript_import_module_tag("public/Articles")%>
+<% end %>
 
 <div class="h-container">
     <div class="v-container">
         <div class="v-container-item">
-
+            <nav id="v-nav-projects-preview" class="v-nav">
+                <%= render(:partial => "shared/post_preview", 
+                           :locals => { :pagy => @pagy, :posts => @a_posts }) %>
+            </nav>
         </div>
     </div>
 </div>

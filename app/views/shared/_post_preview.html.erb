@@ -10,3 +10,7 @@
         </li>
     <% end %>
 </ul>
+
+<% unless pagy == nil %>
+    <%== pagy_nav(pagy).html_safe %>
+<% end %>
