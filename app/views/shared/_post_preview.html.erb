@@ -5,7 +5,7 @@
                 <h1 class="post-preview-title"><%= p.title %></h1>
                 <%= image_tag(p.thumbnail, class: "post-preview-thumbnail") %>
                 <small class="post-preview-date"><%= p.created_at.to_formatted_s(:long_ordinal) %> GMT</small>
-                <p class="post-preview-body"><%= p.body %></p>
+                <div class="post-preview-body"><%== p.body.html_safe %></div>
             </a>
         </li>
     <% end %>

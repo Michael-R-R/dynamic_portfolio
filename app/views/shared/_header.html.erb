@@ -19,7 +19,7 @@
     </ul>
   </nav>
 
-  <% if yield(:header_img_path) != ""%>
+  <% unless yield(:header_img_path) == ""%>
     <div id="header-banner-container">
       <div id="header-banner-img-container">
         <%= image_tag(yield(:header_img_path), alt: "Header banner image", id: "header-banner-img") %>

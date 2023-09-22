@@ -30,13 +30,31 @@
 
       .post-preview-body
       {
-        font-size: 16px;
-        width: 100%;
+        display: block;
+        text-align: center;
+        width: 80%;
         margin: 0 auto 0 auto;
         max-height: 256px;
         overflow: hidden;
-        text-overflow: ellipsis;
-        text-align: center;
+
+        *
+        {
+          display: none;
+        }
+
+        p
+        {
+          display: inline-block;
+          font-size: 16px;
+          text-align: left;
+          padding: 0;
+          margin: 0;
+        }
+
+        br
+        {
+          display: none;
+        }
       }
     }
   }
