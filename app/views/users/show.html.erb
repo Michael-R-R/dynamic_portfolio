@@ -5,6 +5,7 @@
     <% if logged_in? %>
       <h1><%= @user.username %></h1>
       <h1>Logged in</h1>
+      <button><%= link_to("Create Project", create_project_path) %></button>
     <% end %>
   </div>
 </div>

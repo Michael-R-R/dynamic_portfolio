@@ -1,7 +1,7 @@
 <ul class="post-preview-list">
     <% posts.each do |p|%>
         <li class="post-preview-item">
-            <a class="post-preview-link" href="<%= post_path(p) %>">
+            <a class="post-preview-link" href="<%= article_path(p) %>">
                 <h1 class="post-preview-title"><%= p.title %></h1>
                 <%= image_tag(p.thumbnail, class: "post-preview-thumbnail") %>
                 <small class="post-preview-date"><%= p.created_at.to_formatted_s(:long_ordinal) %> GMT</small>

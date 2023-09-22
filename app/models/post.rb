@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
   validates(:title, presence: true, length: { maximum: 255 })
   validates(:thumbnail, presence: true, length: { maximum: 255 })
+  validates(:type, presence: true)
+  validates(:user_id, presence: true)
 
   belongs_to(:user)
 end

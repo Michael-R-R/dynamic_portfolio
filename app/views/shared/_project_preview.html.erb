@@ -1,0 +1,16 @@
+<ul class="post-preview-list">
+    <% posts.each do |p|%>
+        <li class="post-preview-item">
+            <a class="post-preview-link" href="<%= project_path(p) %>">
+                <h1 class="post-preview-title"><%= p.title %></h1>
+                <%= image_tag(p.thumbnail, class: "post-preview-thumbnail") %>
+                <small class="post-preview-date"><%= p.created_at.to_formatted_s(:long_ordinal) %> GMT</small>
+                <div class="post-preview-body"><%== p.body.html_safe %></div>
+            </a>
+        </li>
+    <% end %>
+</ul>
+
+<% unless pagy == nil %>
+    <%== pagy_nav(pagy).html_safe %>
+<% end %>

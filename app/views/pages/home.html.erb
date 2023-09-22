@@ -12,7 +12,7 @@
       <h1>Projects</h1>
 
       <nav id="v-nav-projects-preview" class="v-nav">
-        <%= render(:partial => "shared/post_preview",
+        <%= render(:partial => "shared/project_preview",
                    :locals => { :pagy => nil, :posts => @p_posts }) %>
       </nav>
 
@@ -25,8 +25,8 @@
       <h1>Articles</h1>
 
       <nav id="v-nav-articles-preview" class="v-nav">
-        <%= render(:partial => "shared/post_preview",
-                   :locals => { :pagy => nil, :posts => @a_posts }) %>
+      <%= render(:partial => "shared/article_preview",
+                 :locals => { :pagy => nil, :posts => @a_posts }) %>
       </nav>
 
       <p class="see-more-link"><%= link_to("See more...", articles_path) %></p>
