@@ -2,10 +2,19 @@
 
 <div class="v-container">
   <div class="v-container-item">
+
     <% if logged_in? %>
       <h1><%= @user.username %></h1>
-      <h1>Logged in</h1>
-      <button><%= link_to("Create Project", create_project_path) %></button>
     <% end %>
+
+    <% if can_create?(@user) %>
+      <nav class="h-nav", style="margin-bottom: 10px;">
+        <ul>
+          <li><%= link_to("Create Project", create_project_path) %></li>
+          <li><%= link_to("Create Article", create_article_path) %></li>
+        </ul>
+      </nav>
+    <% end %>
+
   </div>
 </div>

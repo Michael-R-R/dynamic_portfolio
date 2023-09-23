@@ -1,12 +1,4 @@
-<% content_for(:head) do %>
-  <%= stylesheet_link_tag("public/show_post", "data-turbo-track": "reload") %>
-<% end %>
-
-<div class="v-container">
-  <div class="v-container-item">
-    <h1 class="post-title"><%= @post.title %></h1>
-    <small class="post-date"><%= @post.updated_at.to_formatted_s(:long_ordinal) %> GMT</small>
-    <%= image_tag(@post.thumbnail, class: "post-thumbnail") %>
-    <div class="post-body"><%== @post.body.html_safe %></div>
-  </div>
-</div>
+<%= render(partial: "shared/show_post",
+           locals: { edit_path: edit_project_path(@post),
+                     delete_path: delete_project_path(@post),
+                     post: @post }) %>

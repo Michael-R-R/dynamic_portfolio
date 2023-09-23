@@ -20,12 +20,12 @@ module SessionsHelper
     !current_user.nil?
   end
 
-  def authenticate_user?(user)
+  def is_current_user?(user)
     if logged_in? && (user.id == current_user.id)
       true
     else
       false
     end
   end
-
+  
 end

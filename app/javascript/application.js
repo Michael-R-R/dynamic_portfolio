@@ -3,5 +3,3 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 import "shared/HeaderNavHighlight"
-
-Turbo.session.drive = false

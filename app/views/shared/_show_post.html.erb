@@ -1,0 +1,28 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag("public/show_post", "data-turbo-track": "reload") %>
+<% end %>
+
+<div class="v-container">
+  <div class="v-container-item">
+
+    <% if logged_in?() %>
+      <nav class="h-nav", style="margin-top:10px;">
+        <ul>
+          <% if can_edit?(current_user()) %>
+            <li><%= link_to("Edit", edit_path) %></li>
+          <% end %>
+
+          <% if can_delete?(current_user()) %>
+            <li><%= link_to("Delete", delete_path, data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" }) %></li>
+          <% end %>
+        </ul>
+      </nav>
+    <% end %>
+
+    <h1 class="post-title"><%= post.title %></h1>
+    <small class="post-date"><%= post.updated_at.to_formatted_s(:long_ordinal) %> GMT</small>
+    <%= image_tag(post.thumbnail, class: "post-thumbnail") %>
+    <div class="post-body"><%== post.body.html_safe %></div>
+
+  </div>
+</div>

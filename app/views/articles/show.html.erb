@@ -1,0 +1,4 @@
+<%= render(partial: "shared/show_post",
+           locals: { edit_path: edit_article_path(@post),
+                     delete_path: delete_article_path(@post),
+                     post: @post }) %>
