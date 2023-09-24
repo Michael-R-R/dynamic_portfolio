@@ -6,11 +6,11 @@ module RolesHelper
         end
 
         role = Role.find_by(user_id: user.id)
-        unless role.role_name == "admin"
+        if role&.admin
+            return true
+        else
             return false
         end
-
-        return true;
     end
     
 end

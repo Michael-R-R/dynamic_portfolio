@@ -1,28 +1,20 @@
 class ArticlesController < ApplicationController
 
+    before_action(:create_access, only: [:new, :create])
+    before_action(:edit_access, only: [:edit, :update])
+    before_action(:delete_access, only: [:destroy])
+
     def show
         @post = Article.find(params[:id])
     end
 
     def new
-        user = current_user()
-        unless can_create?(user)
-            redirect_to(root_url)
-            return
-        end
-
         @post = Article.new
     end
 
     def create
-        user = current_user()
-        unless can_create?(user)
-            redirect_to(root_url)
-            return
-        end
-
         @post = Article.new(article_params)
-        @post.user_id = user.id
+        @post.user_id = current_user().id
 
         if @post.save
             redirect_to(@post)
@@ -34,21 +26,10 @@ class ArticlesController < ApplicationController
 
     def edit
         @post = Article.find(params[:id])
-
-        user = current_user()
-        unless can_edit?(user)
-            redirect_to(root_url)
-        end
     end
 
     def update
         @post = Article.find(params[:id])
-
-        user = current_user()
-        unless can_edit?(user)
-            redirect_to(root_url)
-            return
-        end
 
         if @post.update(article_params)
             flash[:success] = "Post updated"
@@ -60,14 +41,7 @@ class ArticlesController < ApplicationController
     end
 
     def destroy
-        user = current_user()
-        unless can_delete?(user)
-            redirect_to(root_url)
-            return
-        end
-
         Article.find(params[:id]).destroy
-        flash[:success] = "Post Deleted"
         redirect_to(articles_path, status: :see_other)
     end
 
@@ -75,6 +49,18 @@ class ArticlesController < ApplicationController
 
     def article_params
         params.require(:article).permit(:title, :thumbnail, :body)
+    end
+
+    def create_access
+        redirect_to(root_url) unless can_create?(current_user())
+    end
+
+    def edit_access
+        redirect_to(root_url) unless can_edit?(current_user())
+    end
+
+    def delete_access
+        redirect_to(root_url) unless can_delete?(current_user())
     end
 
 end

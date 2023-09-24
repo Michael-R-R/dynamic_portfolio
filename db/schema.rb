@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_07_171734) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_24_181154) do
   create_table "permissions", force: :cascade do |t|
     t.boolean "create"
     t.boolean "edit"
@@ -33,8 +33,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_07_171734) do
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string "role_name"
     t.integer "user_id", null: false
+    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_roles_on_user_id"

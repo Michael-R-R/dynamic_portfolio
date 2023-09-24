@@ -2,7 +2,7 @@
 
 <div class="v-container">
     <div class="v-container-item">
-        <%= form_with(url: path, model: post) do |f| %>
+        <%= form_with(url: path, model: post, data: { turbo: false }) do |f| %>
             <%= f.label(:title) %>
             <%= f.text_field(:title) %>
 

@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
+  
+  before_action(:matches_login_user, only: [:show])
 
   def show
-    user = User.find(params[:id])
+    @user = User.find(params[:id])
+  end
 
-    if is_current_user?(user)
-      @user = user
-    else
-      redirect_to(root_url)
-    end
+  private
+
+  def matches_login_user
+    redirect_to(root_url) unless is_current_user?(current_user())
   end
 
 end
