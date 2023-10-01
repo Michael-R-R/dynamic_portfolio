@@ -11,11 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_09_24_181154) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "permissions", force: :cascade do |t|
     t.boolean "create"
     t.boolean "edit"
     t.boolean "remove"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_permissions_on_user_id"
@@ -26,14 +29,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_181154) do
     t.string "thumbnail"
     t.text "body"
     t.string "type"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
