@@ -6,7 +6,6 @@ pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 
-pin "public/Home", preload: true
-pin "public/Projects", preload: true
-
-pin "shared/HeaderNavHighlight", preload: true
+pin_all_from "app/javascript/public", under: "public"
+pin_all_from "app/javascript/shared", under: "shared"
+pin_all_from "app/javascript/utility", under: "utility"

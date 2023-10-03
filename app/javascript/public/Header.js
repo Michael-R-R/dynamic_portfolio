@@ -1,4 +1,4 @@
-import { highlightNavigation } from "../Util/NavHighlighter";
+import { highlightNavigation } from "utility/NavHighlighter";
 
 document.addEventListener("turbo:load", () =>
 {
