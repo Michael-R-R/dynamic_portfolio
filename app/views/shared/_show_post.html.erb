@@ -20,7 +20,10 @@
     <% end %>
 
     <h1 class="post-title"><%= post.title %></h1>
-    <small class="post-date"><%= post.updated_at.to_formatted_s(:long_ordinal) %> GMT</small>
+    <small class="post-date">Created - <%= post.created_at.to_formatted_s(:long_ordinal) %> GMT</small>
+    <% unless post.created_at == post.updated_at %>
+      <small class="post-date">Edited - <%= post.updated_at.to_formatted_s(:long_ordinal) %> GMT</small>
+    <% end %>
     <%= image_tag(post.thumbnail, class: "post-thumbnail") %>
     <div class="post-body"><%== post.body.html_safe %></div>
 
