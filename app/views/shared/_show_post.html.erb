@@ -25,7 +25,7 @@
       <small class="post-date">Edited - <%= post.updated_at.to_formatted_s(:long_ordinal) %> GMT</small>
     <% end %>
     <%= image_tag(post.thumbnail, class: "post-thumbnail") %>
-    <div class="post-body"><%== post.body.html_safe %></div>
+    <div class="post-body"><%= post.content %></div>
 
   </div>
 </div>

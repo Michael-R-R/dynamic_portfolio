@@ -48,7 +48,7 @@ class ProjectsController < ApplicationController
     private
 
     def project_params
-        params.require(:project).permit(:title, :thumbnail, :body)
+        params.require(:project).permit(:title, :thumbnail, :content)
     end
 
     def create_access
